@@ -1,8 +1,8 @@
 ﻿# Bateau_Thibault : 
+MEMBRES : 
 
-Creation des branches: 
 
--devops1
--devops2
--devops3
--devops4
+SAMOURA Amadou : role devops1
+Lateb Melissa : role devops2
+Nathan Benais: rôle devops3
+
