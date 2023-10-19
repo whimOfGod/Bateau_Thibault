@@ -1,3 +1,276 @@
+import { StyleSheet, Text, ImageBackground, View } from 'react-native';
+import React from 'react';
+import MyButton from '../button/MyButton';
+
+const Vue2 = ({ navigation }) => {
+  const handlePress30 = () => {
+    navigation.navigate('Vue30');
+  };
+
+  const handlePress31 = () => {
+    navigation.navigate('Vue31');
+  };
+
+  const handlePress32 = () => {
+    navigation.navigate('Vue32');
+  };
+
+  const handlePress33 = () => {
+    navigation.navigate('Vue33');
+  };
+
+  const handlePress34 = () => {
+    navigation.navigate('Vue34');
+  };
+
+  const handlePress1 = () => {
+    navigation.navigate('Vue1');
+  };
+
+
+  return (
+    <ImageBackground
+      source={require('../assets/images/background.png')}
+      style={styles.imageBackground}
+      resizeMode="cover"
+    >
+      <View style={styles.container}>
+        <View style={styles.imageContainer}>
+            <Text style={styles.styletext1}>Nos bateau partenaires</Text>
+            <Text style={styles.styletext2}>06.63.99.99.78</Text>
+            <Text style={styles.styletext2}>lebateaudethibault@gmail.com</Text>
+            <Text style={styles.styletext2}>www.facebook/lebateaudethibault</Text>
+          </View>
+
+        <View style={styles.buttonGroup}>
+          <MyButton
+            label="Bistro des Gascons"
+            onPress={handlePress30}
+            style={styles.fullWidthButton}
+          />
+
+          <MyButton
+            label="Les fous de l'île"
+            onPress={handlePress31}
+            style={styles.fullWidthButton}
+          />
+        </View>
+
+        <View style={styles.buttonGroup}>
+          <MyButton
+            label="Bistrot Landais"
+            labelFontSize={10}
+            onPress={handlePress32}
+            style={styles.fullWidthButton}
+          />
+
+          <MyButton
+            label="Villa 9-Trois"
+            onPress={handlePress33}
+            style={styles.fullWidthButton}
+          />
+        </View>
+
+        <View style={styles.buttonGroup}>
+          <MyButton
+            label="Bistro du Sommelier"
+            onPress={handlePress34}
+            style={styles.fullWidthButton}
+          />
+
+          <MyButton
+            label="Devenez partenaire!"
+            onPress={handlePress1}
+           // style={styles.fullWidthButton}
+          />
+        </View>
+
+      </View>
+    </ImageBackground>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'blue',
+  },
+  imageBackground: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
+  buttonGroup: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 5,
+  },
+  styletext1:{
+    color: 'white',
+    // fontFamily: 'tattoo-script',
+    fontFamily: "italic",
+    fontSize: 30,
+    paddingBottom: 20,
+  },
+  imageContainer: {
+    marginTop: '0px',
+    flex: 1,
+    justifyContent: 'flex-end',
+    width: '80%',
+  },
+//   fullWidthButton: {
+//     width: '100%',
+//   },
+    // buttonGroup: {
+    //     flexDirection: 'row', // Aligne l'icône et le texte horizontalement
+    //     alignItems: 'center', // Centre l'icône et le texte verticalement
+    //     padding: 10,
+    //     margin: 10,
+    //     width: '100%',
+    // },
+});
+
+export default Vue2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Pressable, StyleSheet, Text, ImageBackground, View} from 'react-native';
+// import React from 'react';
+
+// const Vue0 = ({navigation}) => {
+
+//     const handlePress = () => {
+//         <button onClick={handlePress}>Vue1</button>
+//         navigation.navigate('Vue20')
+
+//     }
+
+//     const handlePress2 = () => {
+//         <button onClick={handlePress2}>Vue2</button>
+//         navigation.navigate('Vue21')
+//     }
+
+//     const handlePress3 = () => {
+//         <button onClick={handlePress3}>Vue3</button>
+//         navigation.navigate('Vue22')
+//     }
+
+//     const handlePress4 = () => {    
+//         <button onClick={handlePress4}>Vue4</button>
+//         navigation.navigate('Vue23')
+//     }
+
+
+//   return (
+
+//     <ImageBackground 
+//       source={require('../assets/images/background.png')}
+//       style={styles.imageBackground} // Set styles for the ImageBackground
+//       resizeMode="cover" // Adjust this to control how the image scales
+// >
+//         <View style={styles.container}>
+//         <Text style={styles.text}>Bienvenue sur mon application</Text>
+//         <Text style={styles.text}>Je m'appelle Thibault</Text>
+
+//       <Pressable
+//       style={({pressed}) => ({backgroundColor: 'red', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
+//       onPress={handlePress}
+//       >
+//       <Text style={styles.btn}>Vue20</Text>
+//       </Pressable>
+
+//         <Pressable 
+//         style={({pressed}) => ({backgroundColor: 'blue', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
+//         onPress={handlePress2}
+//         >
+//         <Text style={styles.btn}>Vue21</Text>
+//         </Pressable>
+
+//         <Pressable 
+//         style={({pressed}) => ({backgroundColor: 'black', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
+//         onPress={handlePress3}
+//         >
+//         <Text style={styles.btn}>Vue22</Text>
+//         </Pressable>
+//         <Pressable
+//         style={({pressed}) => ({backgroundColor: 'green', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
+//         onPress={handlePress4}
+//         >
+//         <Text style={styles.btn}>Vue23</Text>
+//         </Pressable>
+
+//     </View>
+//     </ImageBackground >
+
+    
+//   )
+  
+  
+
+// }
+
+
+// export default Vue0
+
+// const styles = StyleSheet.create({
+//     container: {
+        
+//         flex: 2,
+//         alignItems: 'center',
+//         justifyContent: 'center',
+//     },
+//     text:{
+//       fontSize: 20,
+//       fontWeight: 'bold',
+//       color: 'blue',
+//     }, 
+//     btn:{
+//         padding: 10,
+//         color: 'white',
+//         borderRadius: 10,
+//         textDecoration: 'none',
+//         display: 'inline-block',
+//         fontSize: 30,
+//         margin: 10,
+//         transitionDuration: 0.4,
+//     }, 
+//     imageBackground: {
+//         flex: 1, // Ensure the image fills the entire container
+//         width: '100%', // Set the width to 100% of the container
+//         height: '100%', // Set the height to 100% of the container
+//       },
+
+
+// })
+
+
+
+
 // import { Pressable, StyleSheet, Text, ImageBackground, View} from 'react-native';
 // import React from 'react';
 
@@ -117,160 +390,3 @@
 
 // })
 
-import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  ScrollView,
-  TouchableWithoutFeedback,
-} from "react-native";
-import { useNavigation } from "@react-navigation/native";
-
-
-export default function Profile() {
-  const navigation = useNavigation();
-  return (
-    <ScrollView style={styles.container}>
-     
-      <Text style={styles.paragraph}>
-     Les vins de type rouges, rosés, blancs et pétillants, les vins représentent un univers envoûtant. 
-      Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs et partez à 
-      la découverte de toutes les facettes des vins.
-      </Text>
-      <View style={styles.row}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate("conseilPageRouge")}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={styles.image}
-              source={require("../assets/images/poulpe.png")}
-            />
-            <View style={styles.imageOverlay} />
-            <Text style={styles.imageText}>Rouge</Text>
-          </View>
-        </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate("conseilPageRouge")}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={styles.image}
-              source={require("../assets/images/poulpe.png")}
-            />
-
-            <View style={styles.imageOverlay} />
-            <Text style={styles.imageText}>Blanc</Text>
-          </View>
-        </TouchableWithoutFeedback>
-      </View>
-      <View style={styles.row}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate("conseilPageRouge")}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={styles.image}
-              source={require("../assets/images/poulpe.png")}
-            />
-            <View style={styles.imageOverlay} />
-            <Text style={styles.imageText}>Rosé</Text>
-          </View>
-        </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate("conseilPageRouge")}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={styles.image}
-              source={require("../assets/images/poulpe.png")}
-            />
-            <View style={styles.imageOverlay} />
-            <Text style={styles.imageText}>Pétillant</Text>
-          </View>
-        </TouchableWithoutFeedback>
-      </View>
-      <Text> {"\n"}{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
-    </ScrollView>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,  
-    // backgroundColor: "#fff",
-  
-  },
-
-  title: {
-
-    
-    marginBottom: 40,
-    padding: 20,
-  
-    color:'#CEB876',
-    backgroundColor: '#6E1C40',
-    borderBottomLeftRadius: 15,
-    borderBottomRightRadius: 15,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-
-
-
-  paragraph: {
-    marginTop:15,
-    paddingHorizontal: 14,
-    fontSize: 16,
-    lineHeight: 24,
-    textAlign: "justify",
-    marginBottom: 20,
-  },
-  row: {
-    flexDirection: "row",
-    
-  },
-  imageContainer: {
-    
-    flex: 1,
-    aspectRatio: 1,
-    margin: 5,
-    borderRadius: 8,
-    width: 100,
-    position: "relative",
-  },
-  image: {
-    flex: 1,
-    aspectRatio: 1,
-    borderRadius: 8,
-    width: "100%",
-    position: "relative",
-  },
-  imageOverlay: {
-    position: "absolute",
-    content: "",
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.2)",
-    borderRadius: 8,
-  },
-  imageText: {
-  position: 'absolute',
-  color: '#fff',
-  fontSize: 32,
-  fontWeight: 'bold',
-  textShadowColor: 'rgba(0, 0, 0, 0.8)',
-  textShadowOffset: { width: 1, height: 1 },
-  textShadowRadius: 2,
-  zIndex: 1,
-  textAlign: 'center',
-  top: '34%',
-  left: 0,
-  right: 0,
-  bottom: 0,
-  justifyContent: 'center',
-  alignItems: 'center',
-   }, 
-});
