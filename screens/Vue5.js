@@ -5,28 +5,28 @@ const Vue0 = ({navigation}) => {
 
     const handlePress = () => {
         <button onClick={handlePress}>Vue1</button>
-        navigation.navigate('Vue1')
+        navigation.navigate('Vue50')
 
     }
 
     const handlePress2 = () => {
         <button onClick={handlePress2}>Vue2</button>
-        navigation.navigate('Vue2')
+        navigation.navigate('Vue51')
     }
 
     const handlePress3 = () => {
         <button onClick={handlePress3}>Vue3</button>
-        navigation.navigate('Vue3')
+        navigation.navigate('Vue52')
     }
 
     const handlePress4 = () => {    
         <button onClick={handlePress4}>Vue4</button>
-        navigation.navigate('Vue4')
+        navigation.navigate('Vue53')
     }
 
     const handlePress5 = () => {
         <button onClick={handlePress5}>Vue5</button>
-        navigation.navigate('Vue5')
+        navigation.navigate('Vue54')
     }
 
   return (
@@ -44,34 +44,34 @@ const Vue0 = ({navigation}) => {
       style={({pressed}) => ({backgroundColor: 'blue', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
       onPress={handlePress}
       >
-      <Text style={styles.btn}>Vue51</Text>
+      <Text style={styles.btn}>Vue50</Text>
       </Pressable>
 
         <Pressable 
         style={({pressed}) => ({backgroundColor: 'blue', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
         onPress={handlePress2}
         >
-        <Text style={styles.btn}>Vue52</Text>
+        <Text style={styles.btn}>Vue51</Text>
         </Pressable>
 
         <Pressable 
         style={({pressed}) => ({backgroundColor: 'blue', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
         onPress={handlePress3}
         >
-        <Text style={styles.btn}>Vue53</Text>
+        <Text style={styles.btn}>Vue52</Text>
         </Pressable>
         <Pressable
         style={({pressed}) => ({backgroundColor: 'blue', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
         onPress={handlePress4}
         >
-        <Text style={styles.btn}>Vue54</Text>
+        <Text style={styles.btn}>Vue53</Text>
         </Pressable>
 
         <Pressable
         style={({pressed}) => ({backgroundColor: 'orange', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
         onPress={handlePress5}
         >
-        <Text style={styles.btn}>Vue55</Text>
+        <Text style={styles.btn}>Vue54</Text>
         </Pressable>
     </View>
     </ImageBackground >

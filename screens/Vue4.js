@@ -5,25 +5,84 @@ const Vue0 = ({navigation}) => {
 
     const handlePress = () => {
         <button onClick={handlePress}>Vue1</button>
-        navigation.navigate('Vue1')
+        navigation.navigate('Vue40')
+
     }
 
+    const handlePress2 = () => {
+        <button onClick={handlePress2}>Vue2</button>
+        navigation.navigate('Vue41')
+    }
+
+    const handlePress3 = () => {
+        <button onClick={handlePress3}>Vue3</button>
+        navigation.navigate('Vue42')
+    }
+
+    const handlePress4 = () => {    
+        <button onClick={handlePress4}>Vue4</button>
+        navigation.navigate('Vue43')
+    }
+
+    const handlePress5 = () => {
+        <button onClick={handlePress5}>Vue5</button>
+        navigation.navigate('Vue44')
+    }
 
   return (
+
     <ImageBackground 
       source={require('../assets/images/background.png')}
       style={styles.imageBackground} // Set styles for the ImageBackground
       resizeMode="cover" // Adjust this to control how the image scales
 >
-
         <View style={styles.container}>
         <Text style={styles.text}>Bienvenue sur mon application</Text>
         <Text style={styles.text}>Je m'appelle Thibault</Text>
+
+      <Pressable
+      style={({pressed}) => ({backgroundColor: 'red', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
+      onPress={handlePress}
+      >
+      <Text style={styles.btn}>Vue40</Text>
+      </Pressable>
+
+        <Pressable 
+        style={({pressed}) => ({backgroundColor: 'blue', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
+        onPress={handlePress2}
+        >
+        <Text style={styles.btn}>Vue41</Text>
+        </Pressable>
+
+        <Pressable 
+        style={({pressed}) => ({backgroundColor: 'black', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
+        onPress={handlePress3}
+        >
+        <Text style={styles.btn}>Vue42</Text>
+        </Pressable>
+        <Pressable
+        style={({pressed}) => ({backgroundColor: 'green', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
+        onPress={handlePress4}
+        >
+        <Text style={styles.btn}>Vue43</Text>
+        </Pressable>
+
+        <Pressable
+        style={({pressed}) => ({backgroundColor: 'orange', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
+        onPress={handlePress5}
+        >
+        <Text style={styles.btn}>Vue44</Text>
+        </Pressable>
     </View>
     </ImageBackground >
+
+    
   )
   
+  
+
 }
+
 
 export default Vue0
 
