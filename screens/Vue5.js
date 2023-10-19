@@ -1,118 +1,118 @@
-import { Pressable, StyleSheet, Text, ImageBackground, View} from 'react-native';
+
+
+import { Pressable, StyleSheet, Text, ImageBackground, View } from 'react-native';
 import React from 'react';
+import MyButton from '../button/MyButton';
+const Vue0 = ({ navigation }) => {
+  
+  const handlePress50 = () => {
+    navigation.navigate('Vue50');
+  };
+  
+  const handlePress51 = () => {
+    navigation.navigate('Vue51');
+  };
 
-const Vue0 = ({navigation}) => {
+  const handlePress52 = () => {
+    navigation.navigate('Vue52');
+  }
 
-    const handlePress = () => {
-        <button onClick={handlePress}>Vue1</button>
-        navigation.navigate('Vue50')
+  const handlePress53 = () => {
+    navigation.navigate('Vue53');
+  }
 
-    }
+  // const handlePress54 = () => {
+  //   navigation.navigate('Vue54');
+  // }
 
-    const handlePress2 = () => {
-        <button onClick={handlePress2}>Vue2</button>
-        navigation.navigate('Vue51')
-    }
-
-    const handlePress3 = () => {
-        <button onClick={handlePress3}>Vue3</button>
-        navigation.navigate('Vue52')
-    }
-
-    const handlePress4 = () => {    
-        <button onClick={handlePress4}>Vue4</button>
-        navigation.navigate('Vue53')
-    }
-
-    const handlePress5 = () => {
-        <button onClick={handlePress5}>Vue5</button>
-        navigation.navigate('Vue54')
-    }
+  // const handlePress5 = () => {
+  //   navigation.navigate('Vue5');
+  // }
 
   return (
-
-    <ImageBackground 
+    <ImageBackground
       source={require('../assets/images/background.png')}
-      style={styles.imageBackground} // Set styles for the ImageBackground
-      resizeMode="cover" // Adjust this to control how the image scales
->
-        <View style={styles.container}>
-        <Text style={styles.text}>Bienvenue sur mon application</Text>
-        <Text style={styles.text}>Je m'appelle Thibault</Text>
+      style={styles.imageBackground}
+      resizeMode="cover"
+    >
+      <View style={styles.container}>
+          <Text style={styles.text}>Choisissez vos produits</Text>
+          <Text> </Text>
+          <Text> </Text>
+          <Text> </Text>
+          <Text> </Text>
+          <Text> </Text>
+          <Text> </Text>
+          <Text> </Text>
 
-      <Pressable
-      style={({pressed}) => ({backgroundColor: 'blue', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
-      onPress={handlePress}
-      >
-      <Text style={styles.btn}>Vue50</Text>
-      </Pressable>
+          <MyButton
+            label="Poissons"
+            iconSource={require('../assets/images/poulpe.png')}
+            onPress={handlePress50}
+            style={styles.buttonSpacing}
+          />
 
-        <Pressable 
-        style={({pressed}) => ({backgroundColor: 'blue', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
-        onPress={handlePress2}
-        >
-        <Text style={styles.btn}>Vue51</Text>
-        </Pressable>
+          <MyButton
+            label="Coquillages"
+            iconSource={require('../assets/images/poulpe.png')}
+            onPress={handlePress51}
+            style={styles.buttonSpacing}
+          />
 
-        <Pressable 
-        style={({pressed}) => ({backgroundColor: 'blue', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
-        onPress={handlePress3}
-        >
-        <Text style={styles.btn}>Vue52</Text>
-        </Pressable>
-        <Pressable
-        style={({pressed}) => ({backgroundColor: 'blue', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
-        onPress={handlePress4}
-        >
-        <Text style={styles.btn}>Vue53</Text>
-        </Pressable>
+          
+          <MyButton
+            label="Crustacés"
+            iconSource={require('../assets/images/poulpe.png')}
+            onPress={handlePress52}
+            style={styles.buttonSpacing}
+          />
 
-        <Pressable
-        style={({pressed}) => ({backgroundColor: 'orange', padding: 10, margin: 30, opacity: pressed ? 0.5 : 1, borderRadius: 10})}
-        onPress={handlePress5}
-        >
-        <Text style={styles.btn}>Vue54</Text>
-        </Pressable>
-    </View>
-    </ImageBackground >
-
-    
-  )
-  
-  
-
+          <MyButton
+            label="Promotions"
+            iconSource={require('../assets/images/poulpe.png')} 
+            onPress={handlePress53}
+            style={styles.buttonSpacing}
+          />
+      </View>
+    </ImageBackground>
+  );
 }
 
-
-export default Vue0
+export default Vue0;
 
 const styles = StyleSheet.create({
-    container: {
-        
-        flex: 2,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    text:{
-      fontSize: 20,
-      fontWeight: 'bold',
-      color: 'blue',
-    }, 
-    btn:{
-        padding: 10,
-        color: 'white',
-        borderRadius: 10,
-        textDecoration: 'none',
-        display: 'inline-block',
-        fontSize: 30,
-        margin: 10,
-        transitionDuration: 0.4,
-    }, 
-    imageBackground: {
-        flex: 1, // Ensure the image fills the entire container
-        width: '100%', // Set the width to 100% of the container
-        height: '100%', // Set the height to 100% of the container
-      },
-
-
-})
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '110%',
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'black',
+    justifyContent: 'center',
+  },
+  imageBackground: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
+  buttonGroup: {
+    flexDirection: 'row', // Affiche les boutons en ligne horizontalement
+    justifyContent: 'center', // Centre les boutons horizontalement
+    alignItems: 'center', // Centre les boutons verticalement
+    marginVertical:10,
+    width:'100%', // Espace entre les groupes de boutons
+  },
+  fullWidthButton: {
+    width: '100%', // Le bouton occupera 100% de la largeur
+  },
+  buttonSpacing: {
+    marginVertical: 5,
+    width: '100%',
+  },
+  button1:{
+    width: '110%',
+  }
+});
